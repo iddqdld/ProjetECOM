@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,77 +11,46 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="Style 3.css">
+    <link rel="stylesheet" href="Style_3.css">
 
     <script src="jquery-3.7.1.min.js"></script>
     <script>
         $(function(){
-            $("#bandeau").load("bandeau.html");
+            $("#bandeau").load("bandeau.php");
         });
     </script>
-
 </head>
 
 
 <body>
 
-<div id="bandeau"></div>
+    <div id="bandeau"></div>
 
-<section class="menu" id="menu">
+<div class="home-container">
 
-    <h1 class="heading"> Nos <span>produits</span> </h1>
+    <main>
+        <section class="home" id="home">
 
-    <div class="box-container">
+            <div class="content">
+                <h3>réveil connecté</h3>
+                <p><b>GADGETGROOV à le plaisir de vous présenter son nouveau réveil connecté</b></p>
+                <a href="réveil1.html" class="btn">Acheter ICI</a>
+            </div>
 
-        <div class="box">
-            <img src="images/réveil temu.jpg" alt="">
-            <h3>NEW Réveil connecté</h3>
-            <div class="price"> 15,99€ <span> 20.99€ </span></div>
-            <a href="réveil1.html" class="btn">ajouter au panier</a>
-        </div>
+        </section>
 
-        <div class="box">
-            <img src="images/lampe coin.webp" alt="">
-            <h3>Lampe RGB</h3>
-            <div class="price"> 31,20€ <span> 39,99€ </span></div>
-            <a href="lampe coin 2.html" class="btn">ajouter au panier</a>
-        </div>
-
-        <div class="box">
-            <img src="images/lampe murale3.webp" alt="">
-            <h3>Lampe murale RGB</h3>
-            <div class="price"> 11,20€ <span> 19,99€ </span></div>
-            <a href="lampe murale 3.html" class="btn">ajouter au panier</a>
-        </div>
-
-        <div class="box">
-            <img src="images/clavier RGB4.webp" alt="">
-            <h3>Clavier gaming RGB</h3>
-            <div class="price"> 39,99€ <span> 49,99€ </span></div>
-            <a href="clavier 4.html" class="btn">ajouter au panier</a>
-        </div>
-
-        <div class="box">
-            <img src="images/souris rgb 5.webp" alt="">
-            <h3>Souris gaming RGB</h3>
-            <div class="price"> 17,35€ <span> 24,99€ </span></div>
-            <a href="souris 5.html" class="btn">ajouter au panier</a>
-        </div>
-
-        <div class="box">
-            <img src="images/casque6.webp" alt="">
-            <h3>Ecouteur sans fil</h3>
-            <div class="price"> 11,15€ <span> 20€ </span></div>
-            <a href="casque 6.html" class="btn">ajouter au panier</a>
-        </div>
-
+    </main>
+    <div id="videobox">
+        <video id="video" src="images/vidéo 2.mp4" autoplay loop muted></video>
     </div>
 
-</section>
+    <div id="videobox">
+        <video id="video" src="images/vidéo 11.mp4" autoplay loop muted></video>
+    </div>
 
+</div>
 
-
-
+</body>
 
 
 <footer class="footer">
@@ -130,3 +100,4 @@
 </footer>
 
 </html>
+
