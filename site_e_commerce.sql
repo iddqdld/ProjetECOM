@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : dim. 05 mai 2024 à 20:08
+-- Généré le : dim. 05 mai 2024 à 20:28
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.2.12
 
@@ -110,7 +110,7 @@ CREATE TABLE `produit` (
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `username` varchar(10) NOT NULL,
-  `password` varchar(20) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `mail` varchar(255) NOT NULL,
   `admin` int(11) NOT NULL,
   `bloquer` int(11) NOT NULL
@@ -121,7 +121,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `mail`, `admin`, `bloquer`) VALUES
-(1, 'erwan', 'erwan', 'erwan.nicolas@edu.ece.fr', 1, 0);
+(1, 'erwan', '3e296ab5e8a9c95df44c8839a3c42e3fb4614f25eedcdd5211b621b8b9f9f198', 'erwan.nicolas@edu.ece.fr', 1, 0);
 
 --
 -- Index pour les tables déchargées
