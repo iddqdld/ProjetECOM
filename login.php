@@ -1,22 +1,21 @@
 <?php
-session_start();
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 include('db.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $passwordSha256 = hash('sha256', $password);
 
     // Vérifiez les informations d'identification dans la base de données
-    $query = "SELECT * FROM users WHERE username = :username AND password = :password";
-    $stmt = $pdo->prepare($query);
-    $stmt->bindParam(':username', $username, PDO::PARAM_STR);
-    $stmt->bindParam(':password', $passwordSha256, PDO::PARAM_STR);
-    $stmt->execute();
+    $query = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
+    $result = $conn->query($query);
+    if (!$result) {
+        echo "Error: " . $query . "<br>" . $conn->error;
+    }
 
-    if ($user = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        $_SESSION['user_id'] = $user['id'];
-        $_SESSION['username'] = $user['username'];
+    if ($user = $result->fetch_assoc()) {
+        setcookie('username', $user['username'], time() + (86400 * 30), "/"); 
         header('Location: index.php');
         exit();
     } else {
@@ -39,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php endif; ?>
 
     <div>
-        Pas encore inscrit ? <a href="#">S'inscrire</a>
+        Pas encore inscrit ? <a href="backendmockups.php">S'inscrire</a>
     </div>
 
     <form method="post" action="">
