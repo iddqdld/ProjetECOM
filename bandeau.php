@@ -1,5 +1,4 @@
-<?php
-session_start();
+<?php 
 ?>
 <header class="header">
     <section class="flex">
@@ -20,13 +19,12 @@ session_start();
             <a href="login.php">
                 <span class="fas fa-2x fa-shopping-cart" id="card-btn"></span>
             </a>
-            <?php var_dump($_SESSION) ?>
-            <?php if ($_SESSION['user_id'] == null) : ?>
+            <?php if (!isset($_COOKIE['username'])) : ?>
                 <a href="login.php">
                     <span class="fas fa-2x fa-user-slash" id="user-btn"></span>
                 </a>
             <?php else : ?>
-                <a title="vous êtes connecté comme : <?php echo $_SESSION['username'] ?>" href="#">
+                <a title="vous êtes connecté comme : <?php echo $_COOKIE['username'] ?>" href="backendmockups.php">
                     <span class="fas fa-2x fa-user" id="user-btn"></span>
                 </a>
             <?php endif; ?>
