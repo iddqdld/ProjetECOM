@@ -15,17 +15,42 @@
 </form> 
 
 <?php
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "site_e_commerce";
+
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
 include('db.php');
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $username = $_POST["username"];
   $password = $_POST["password"];
+
+ /* $isAdmin = $_POST["isAdmin"]; */
+
+  $sql = "INSERT INTO Users (username, password)
+  VALUES ('$username', '$password')";
+
+  if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+=======
  /* $isAdmin = $_POST["isAdmin"];  */
 
   $sql = "INSERT INTO Users (username, password) VALUES ('$username', '$password',)";
 
   if ($conn->query($sql) === TRUE) {
     echo "registred successfully";
+
   } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
   }
