@@ -1,22 +1,21 @@
 <!DOCTYPE html>
+
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, inital-scale=1">
     <title>Site E-commerce ECE B1 Gr1</title>
 
-    <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Style 3.css">
+    <script src="fonctionnalités.js"></script>
+    <!--<link rel="stylesheet" href="/boutAcheter.css"-->
 </head>
 
-
 <body>
-
-<!-- header section starts  -->
 
 <header class="header">
 
@@ -25,22 +24,22 @@
         <a href="Menu.html" class="logo">
             <img src="images/logo 5.png" alt="">
         </a>
-    
+
         <nav class="navbar">
             <a href="Menu.html">Menu</a>
             <a href="produits.php">Produits</a>
             <a href="Avis.html">Avis</a>
-            <a href="A propos de nous.html">A propos</a>
+            <a href="A propos de nous.html">À propos</a>
             <a href="Contact.html">Nous contacter</a>
 
         </nav>
-    
+
         <div class="icons">
             <div class="fas fa-search" id="search-btn"></div>
             <div class="fas fa-shopping-cart" id="cart-btn"></div>
             <div class="fas fa-bars" id="menu-btn"></div>
         </div>
-    
+
         <div class="search-form">
             <input type="search" id="search-box" placeholder="search here...">
             <label for="search-box" class="fas fa-search"></label>
@@ -49,47 +48,24 @@
 
 </header>
 
+    <video id="video" autoplay loop muted style="position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; z-index: -1;">
+        <source src="images/fondNeon.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+    </video>
 
-<section class="contact" id="contact">
-
-    <h1 class="heading"> ils nous ont fait <span>confiance</span> </h1>
-
-    <h1 class="heading"> <span>Nous</span> contacter ! </h1>
-
-    <div class="row">
-
-        <div class="image">
-            <img src="images/logo 5.png" alt="">
+    <div class="principal">
+        <p class="titre"><b>RÉVEIL MULTIFONCTIONS</b></p>
+        <div class="flotant">
+            <div>
+                <img class="reveil" src="images/reveil.webp">
+            </div>
+            <p class="description">Lampe D'ambiance Multicolore RGB Avec Chargeur Sans Fil Pour Téléphone Portable, Réveil De Bureau, Lampe De Bureau D'étude, Haut-parleur Audio Musical Sans Fil Multifonctionnel, Idéale Pour Créer Une Atmosphère Festive Lors Des Vacances.</p>
         </div>
-
-
-        <form action="">
-            <h3>Envoie nous ton message</h3>
-            <div class="inputBox">
-                <span class="fas fa-user"></span>
-                <input type="text" placeholder="nom">
-            </div>
-            <div class="inputBox">
-                <span class="fas fa-envelope"></span>
-                <input type="email" placeholder="email">
-            </div>
-            <div class="inputBox">
-                <span class="fas fa-phone"></span>
-                <input type="number" placeholder="numéro de téléphone">
-            </div>
-            <input type="submit" value="envoyer" class="btn">
-        </form>
-
+        <a class="bouton"><span>ACHETER</span></a>
     </div>
+</body>
 
-</section>
-
-
-
-
-
-
-
+<div class="container">
 <footer class="footer">
     <div class="container">
         <div class="row">
@@ -135,9 +111,7 @@
         </div>
     </div>
 </footer>
+</div>
+
 
 </html>
-
-
-
-
