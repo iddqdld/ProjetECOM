@@ -38,7 +38,6 @@ html::-webkit-scrollbar-thumb{
 
 body{
     background: var(--bg);
-    font-family: system-ui;
 }
 
 section{
@@ -211,6 +210,10 @@ section{
 }
 
 
+
+
+
+
 .content {
     margin-left: 25%;
     z-index: 1;
@@ -232,10 +235,18 @@ main {
     position: absolute;
 }
 
-.home-container{
-    background:url(../images/home-img.jpeg) no-repeat;
-    background-size: cover;
-    background-position: center;
+
+
+
+
+
+
+
+
+
+
+.fond-noir{
+    background-color:black;
 }
 
 .home{
@@ -249,14 +260,12 @@ main {
 }
 
 .home .content h3{
-    text-shadow: 1px 0 10px grey;
     font-size: 6rem;
     text-transform: uppercase;
     color:#fff;
 }
 
 .home .content p{
-    text-shadow: 1px 0 10px grey;
     font-size: 2rem;
     font-weight: lighter;
     line-height: 1.8;
@@ -563,7 +572,6 @@ h1 {
 }
 
 .footer{
-    border-top: var(--border);
     background:var(--black);
     text-align: center;
 }
@@ -617,6 +625,19 @@ h1 {
     color:var(--main-color);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries  */
 @media (max-width:991px){
 
     html{
@@ -701,7 +722,8 @@ body{
 	box-sizing: border-box;
 }
 .container{
-    margin-top : 50px;
+	max-width: 1170px;
+	margin:auto;
 }
 .row{
 	display: flex;
@@ -711,9 +733,8 @@ ul{
 	list-style: none;
 }
 .footer{
-
 	background-color: #000000;
-    padding: 50px 0;
+    padding: 70px 0;
 }
 .footer-col{
    width: 25%;
@@ -762,6 +783,7 @@ ul{
 	background-color: #ffffff;
 }
 
+/*responsive*/
 @media(max-width: 767px){
   .footer-col{
     width: 50%;
@@ -772,43 +794,4 @@ ul{
   .footer-col{
     width: 100%;
 }
-}
-
-.imgpass{
-        background-image: url('/images/mdp.png');
-        height: 17.5px;
-        width: 20px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        color:#fff;
-        font-size: 2rem;
-        padding-left: 2rem;
-    }
-
-.incription{
-
-}
-
-.inscription .inputBox{
-    display: flex;
-    align-items: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    background:var(--bg);
-    border:var(--border);
-}
-
-.inscription .inputBox span{
-    color:#fff;
-    font-size: 2rem;
-    padding-left: 2rem;
-}
-
-.inscription .inputBox input{
-    width: 100%;
-    padding:2rem;
-    font-size: 1.7rem;
-    color:#fff;
-    text-transform: none;
-    background:none;
 }

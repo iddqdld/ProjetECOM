@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : dim. 05 mai 2024 à 20:28
+-- Généré le : lun. 06 mai 2024 à 10:57
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.2.12
 
@@ -84,7 +84,8 @@ CREATE TABLE `commande` (
 CREATE TABLE `commande_produit` (
   `commande_id` int(11) NOT NULL,
   `produit_id` int(11) NOT NULL,
-  `quantité` int(11) NOT NULL
+  `quantité` int(11) NOT NULL,
+  `prix` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
