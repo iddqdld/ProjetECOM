@@ -165,8 +165,20 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT pour les tables déchargées
---
+-- foreign keys
+ALTER TABLE `adresse`
+ADD FOREIGN KEY (`users_id`) REFERENCES `users`(`id`);
+
+ALTER TABLE `avis`
+ADD FOREIGN KEY (`users_id`) REFERENCES `users`(`id`),
+ADD FOREIGN KEY (`produit_id`) REFERENCES `produit`(`id`);
+
+ALTER TABLE `commande`
+ADD FOREIGN KEY (`users_id`) REFERENCES `users`(`id`);
+
+ALTER TABLE `commande_produit`
+ADD FOREIGN KEY (`commande_id`) REFERENCES `commande`(`id`),
+ADD FOREIGN KEY (`produit_id`) REFERENCES `produit`(`id`);
 
 --
 -- AUTO_INCREMENT pour la table `adresse`
