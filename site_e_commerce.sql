@@ -179,8 +179,22 @@ ADD FOREIGN KEY (`users_id`) REFERENCES `users`(`id`);
 ALTER TABLE `commande_produit`
 ADD FOREIGN KEY (`commande_id`) REFERENCES `commande`(`id`),
 ADD FOREIGN KEY (`produit_id`) REFERENCES `produit`(`id`);
-
+-- 
+-- les produits 
 --
+INSERT INTO `produit` (`nom`, `photo`, `description`, `prix`) VALUES ('NEW Réveil connecté', 'images/reveil.webp ', 'reveil joli', '15.99');
+INSERT INTO `produit` (`nom`, `photo`, `description`, `prix`) VALUES ('lampe de coin', 'images/lampe coin.webp', 'lamp fine et lumineuse pour les coins', '9.99');
+INSERT INTO `produit` (`nom`, `photo`, `description`, `prix`) VALUES ('lamp murale', 'images/lampe murale3.webp', 'lamp s\'accrochant aux murs', '14.99');
+INSERT INTO `produit` (`nom`, `photo`, `description`, `prix`) VALUES ('casque', 'images/casque6.webp', 'Casque confortable', '11.15');
+INSERT INTO `produit` (`nom`, `photo`, `description`, `prix`) VALUES ('clavier', 'images/clavier RGB4.webp', 'un clavier RGB mecanique', '39.99');
+INSERT INTO `produit` (`nom`, `photo`, `description`, `prix`) VALUES ('souris', 'images/souris rgb 5.webp', 'un souris rgb pour le gaming', '17.35');
+
+
+
+
+
+
+
 -- AUTO_INCREMENT pour la table `adresse`
 --
 ALTER TABLE `adresse`
